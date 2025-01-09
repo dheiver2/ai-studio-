@@ -1,5 +1,18 @@
 import React, { useState } from 'react';
-import { Wand2, Loader2, Image, Shield, Clock, Star, Users, Check, Globe, Database, Lock, Sparkles } from 'lucide-react';
+import { 
+  Wand2, 
+  Loader2, 
+  Image, 
+  Shield, 
+  Clock, 
+  Star, 
+  Users, 
+  Check, 
+  Globe, 
+  Database, 
+  Lock, 
+  Sparkles 
+} from 'lucide-react';
 
 const CompleteLanding = () => {
   const [prompt, setPrompt] = useState('');
