@@ -1,9 +1,8 @@
-// components/CompleteLanding.js
 import React, { useState } from 'react';
 import { 
   Wand2, 
   Loader2, 
-  ImageIcon, 
+  Image as ImageIcon, 
   Shield, 
   Clock, 
   Star, 
