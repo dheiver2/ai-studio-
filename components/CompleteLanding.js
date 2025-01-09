@@ -1,8 +1,9 @@
+// components/CompleteLanding.js
 import React, { useState } from 'react';
 import { 
   Wand2, 
   Loader2, 
-  Image, 
+  ImageIcon, 
   Shield, 
   Clock, 
   Star, 
@@ -176,7 +177,7 @@ const CompleteLanding = () => {
                   />
                 ) : (
                   <div className="text-center p-4">
-                    <Image className="h-12 w-12 text-gray-400 mx-auto mb-2" />
+                    <ImageIcon className="h-12 w-12 text-gray-400 mx-auto mb-2" />
                     <p className="text-gray-500">Your image will appear here</p>
                   </div>
                 )}
