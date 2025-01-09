@@ -1,17 +1,14 @@
+// components/CompleteLanding.js
 import React, { useState } from 'react';
 import { 
   Wand2, 
   Loader2, 
-  Image as ImageIcon, 
+  Eye,  // Trocamos para um ícone mais simples
   Shield, 
   Clock, 
   Star, 
   Users, 
-  Check, 
-  Globe, 
-  Database, 
-  Lock, 
-  Sparkles 
+  Check
 } from 'lucide-react';
 
 const CompleteLanding = () => {
@@ -58,32 +55,13 @@ const CompleteLanding = () => {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Free',
-      price: '0',
-      features: ['5 images/day', 'Basic resolution']
-    },
-    {
-      name: 'Pro',
-      price: '29',
-      features: ['100 images/day', 'HD resolution', 'API access'],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      features: ['Unlimited images', '4K resolution', 'Custom features']
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Nav */}
       <nav className="bg-white shadow-sm p-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <Sparkles className="h-6 w-6 text-purple-600" />
+            <Star className="h-6 w-6 text-purple-600" />
             <span className="font-bold text-xl">AI Studio</span>
           </div>
           <div className="hidden md:flex items-center gap-6">
@@ -176,7 +154,7 @@ const CompleteLanding = () => {
                   />
                 ) : (
                   <div className="text-center p-4">
-                    <ImageIcon className="h-12 w-12 text-gray-400 mx-auto mb-2" />
+                    <Eye className="h-12 w-12 text-gray-400 mx-auto mb-2" />
                     <p className="text-gray-500">Your image will appear here</p>
                   </div>
                 )}
@@ -202,41 +180,6 @@ const CompleteLanding = () => {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Pricing</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`bg-white p-6 rounded-lg shadow ${
-                  plan.popular ? 'ring-2 ring-purple-600' : ''
-                }`}
-              >
-                <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
-                <div className="text-3xl font-bold mb-4">
-                  ${plan.price}
-                  {plan.price !== 'Custom' && <span className="text-lg">/mo</span>}
-                </div>
-                <ul className="space-y-2 mb-6">
-                  {plan.features.map((feature, fIndex) => (
-                    <li key={fIndex} className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-500" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <button className="w-full py-2 px-4 rounded-lg font-medium bg-purple-600 text-white">
-                  Get Started
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-gray-400">© 2025 AI Studio. All rights reserved.</p>
