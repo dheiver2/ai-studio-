@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Wand2, Loader2, ImageDown, Shield, Clock, Star, Users, Check, Globe, Database, Lock, Sparkles } from 'lucide-react';
+import { Wand2, Loader2, Image, Shield, Clock, Star, Users, Check, Globe, Database, Lock, Sparkles } from 'lucide-react';
 
 const CompleteLanding = () => {
   const [prompt, setPrompt] = useState('');
@@ -163,7 +163,7 @@ const CompleteLanding = () => {
                   />
                 ) : (
                   <div className="text-center p-4">
-                    <ImageDown className="h-12 w-12 text-gray-400 mx-auto mb-2" />
+                    <Image className="h-12 w-12 text-gray-400 mx-auto mb-2" />
                     <p className="text-gray-500">Your image will appear here</p>
                   </div>
                 )}
