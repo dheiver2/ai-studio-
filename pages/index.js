@@ -1,5 +1,5 @@
-import CompleteLanding from '../components/CompleteLanding'
+import CompleteLanding from '../components/CompleteLanding';
 
 export default function Home() {
-  return <CompleteLanding />
+  return <CompleteLanding />;
 }
